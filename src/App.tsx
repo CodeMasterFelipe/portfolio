@@ -4,9 +4,11 @@ import { Home } from './sections/Home'
 import { Projects } from './sections/Projects'
 import { theme } from './theme'
 import { Experience } from './sections/experience'
+import { ScrollIndicator } from './components/ScrollIndicator'
 
 const ContentContainer = ({ children }: { children: React.ReactNode }) => (
   <Paper>
+    <ScrollIndicator />
     <Box sx={{ p: 3, pt: 6 }}>
       {children}
     </Box>
