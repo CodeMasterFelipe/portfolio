@@ -22,3 +22,22 @@ const projects = [
   // Add more projects as needed
 ];
 
+export const Projects = () => {
+  return (
+    <Container maxWidth="lg" id="projects">
+      <Typography variant="h4" component="h2" gutterBottom>
+        Projects
+      </Typography>
+      <Stack
+        direction="row"
+        alignItems="center"
+        justifyContent="space-between"
+        spacing={4}>
+        {projects.map((project, index) => (
+          <ProjectTile key={index} {...project} />
+        ))
+        }
+      </Stack>
+    </Container>
+  )
+}
