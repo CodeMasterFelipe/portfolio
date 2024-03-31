@@ -1,5 +1,6 @@
 import { Container, Stack, Typography } from "@mui/material"
 import { ProjectTile } from "../components/ProjectTile"
+
 const projects = [
   {
     title: "Project One",
