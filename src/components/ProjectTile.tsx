@@ -1,7 +1,7 @@
 import { Button, Typography, Link, Card, CardContent, CardActions, CardActionArea } from '@mui/material';
 import { ProjectProps } from '../common/types';
 
-export const ProjectTile = ({ title, description, link, code, image }: ProjectProps) => {
+export const ProjectTile = ({ title, description, link, code }: ProjectProps) => {
   return (
     <Card sx={{
       display: 'flex',

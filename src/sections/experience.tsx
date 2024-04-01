@@ -1,4 +1,4 @@
-import { Container, Typography, useMediaQuery, Theme } from "@mui/material";
+import { Container, Typography, useMediaQuery } from "@mui/material";
 import { Timeline, TimelineDot, TimelineItem, TimelineContent, TimelineConnector, TimelineSeparator, timelineItemClasses } from "@mui/lab"
 
 const experiences = [

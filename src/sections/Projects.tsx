@@ -1,4 +1,4 @@
-import { Container, Stack, Typography } from "@mui/material"
+import { Container, Typography } from "@mui/material"
 import { ProjectTile } from "../components/ProjectTile"
 import Grid from '@mui/material/Unstable_Grid2'
 
