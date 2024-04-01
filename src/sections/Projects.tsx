@@ -1,5 +1,6 @@
 import { Container, Stack, Typography } from "@mui/material"
 import { ProjectTile } from "../components/ProjectTile"
+import Grid from '@mui/material/Unstable_Grid2'
 
 const projects = [
   {
@@ -32,16 +33,19 @@ export const Projects = () => {
       <Typography variant="h4" component="h2" gutterBottom>
         Projects
       </Typography>
-      <Stack
-        direction="row"
-        alignItems="center"
-        justifyContent="space-between"
+      <Grid
+        container
+        // direction="row"
+        // alignItems="center"
+        // justifyContent="space-between"
         spacing={4}>
         {projects.map((project, index) => (
-          <ProjectTile key={index} {...project} />
+          <Grid xs={12} sm={12} md={4}>
+            <ProjectTile key={index} {...project} />
+          </Grid>
         ))
         }
-      </Stack>
+      </Grid>
     </Container>
   )
 }
