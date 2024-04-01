@@ -27,9 +27,9 @@ function App() {
       <Home />
       <ContentContainer>
         <Projects />
-        <Box sx={{ height: '50px' }} />
+        <Box sx={{ height: '80px' }} />
         <Experience />
-        <Box sx={{ height: '50vh' }} />
+        <Box sx={{ height: '80px' }} />
       </ContentContainer>
     </ThemeProvider>
   )
