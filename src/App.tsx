@@ -14,7 +14,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger)
 const ContentContainer = ({ children }: { children: React.ReactNode }) => (
   <Paper id='content-container'>
     <ScrollIndicator />
-    <Box sx={{ p: 3, pt: 6 }}>
+    <Box sx={{ p: 0, pt: 6 }}>
       {children}
     </Box>
   </Paper>
