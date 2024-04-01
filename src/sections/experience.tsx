@@ -1,5 +1,5 @@
-import { Container, Typography } from "@mui/material";
-import { Timeline, TimelineDot, TimelineItem, TimelineContent, TimelineConnector, TimelineSeparator } from "@mui/lab"
+import { Container, Typography, useMediaQuery, Theme } from "@mui/material";
+import { Timeline, TimelineDot, TimelineItem, TimelineContent, TimelineConnector, TimelineSeparator, timelineItemClasses } from "@mui/lab"
 
 const experiences = [
   {
@@ -31,12 +31,22 @@ Provided on-demand support: concept clarification, debugging, and code reviews.`
 ];
 
 export const Experience = () => {
+
+  const isSmallScreen = useMediaQuery('(max-width:900px)')
   return (
     <Container maxWidth="md" id="experience">
       <Typography variant="h4" component="h2" gutterBottom>
         Experience
       </Typography>
-      <Timeline position="alternate">
+      <Timeline
+        position={isSmallScreen ? 'right' : "alternate"}
+        sx={isSmallScreen ? {
+          [`& .${timelineItemClasses.root}:before`]: {
+            flex: 0,
+            padding: 0,
+          },
+        } : {}}
+      >
         {experiences.map((experience, index) => (
           <TimelineItem key={index}>
             <TimelineSeparator>
