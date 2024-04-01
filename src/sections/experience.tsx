@@ -13,14 +13,19 @@ const experiences = [
   {
     title: "Software Engineer/Architect",
     company: "Self-Employed",
-    description: `-\tDeveloped and maintained a full-stack application that helped students in underrepresented communities to get into big tech companies.`,
+    description: `Developed a software platform to reduce risk and increase returns in day trading of cryptocurrencies through the application of real-time machine learning techniques.
+Implementing algorithms with an accuracy rate of 77%, generated trades as high as 20% in returns.
+Developing and designing a scalable and robust architecture, deployed on a Kubernetes cluster, leveraging Kafka as the event orchestrator, with automatic CI/CD pipelines, to ensure seamless performance and reliability.
+Utilize advanced technologies and tools, including Python, Java, javascript, TensorFlow, Sklearn, Flutter, NoSQL/SQL databases, and GCP/AWS/on-prem infrastructure
+https://github.com/Strooper1234/Bybit-api (all I am able to share)`,
     duration: "May 2019 - Present",
   },
   {
-    title: "Software Engineer Intern",
-    company: "Innovative Startup",
-    description: "Assisted in the development of a new project management software, which increased team productivity by 20%.",
-    duration: "May 2018 - Dec 2019"
+    title: "TA/Substitute Instructor",
+    company: "2U Inc.",
+    description: `Assisted students with programming, data analysis, and project development.
+Provided on-demand support: concept clarification, debugging, and code reviews.`,
+    duration: "Feb 2019 - Sep 2022"
   },
   // Add more experiences as needed
 ];
