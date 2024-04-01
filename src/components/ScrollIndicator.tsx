@@ -5,6 +5,7 @@ import { IconButton } from "@mui/material"
 export const ScrollIndicator = () => {
   return (
     <IconButton
+      id="scroll-indicator"
       onClick={() => window.scrollTo({ top: window.outerHeight, behavior: 'smooth' })}
       sx={{
         pt: 2,

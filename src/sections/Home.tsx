@@ -1,8 +1,30 @@
 import { Box, Typography, Container } from '@mui/material';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 export const Home = () => {
+
+  useGSAP(() => {
+    gsap.to('#home', {
+      scrollTrigger: {
+        // trigger: '#home',
+        trigger: 'body',
+        start: 'top top',
+        endTrigger: '#scroll-indicator',
+        // end: 'bottom center',
+        // markers: true,
+        snap: {
+          snapTo: [0, 1],
+          directional: true,
+          duration: { min: 0.5, max: 1 },
+          delay: 0,
+        },
+      },
+    })
+  })
+
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="md" id="home">
       <Box sx={{
         height: '92vh',
         display: 'flex',
