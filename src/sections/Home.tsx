@@ -2,6 +2,10 @@ import { Box, Typography, Container } from '@mui/material';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
+const bio = `a Software Engineer and Tech Educator from Seattle, where the coffee is strong and the code is stronger. \
+            Fuled by a cup of the finest brew, I craft innovative software solutions and mentor the next generation of tech wizards. \
+            Ready for a caffeine-fueled coding adventure? Let's connect!`;
+
 export const Home = () => {
 
   useGSAP(() => {
@@ -37,7 +41,7 @@ export const Home = () => {
           Felipe Rivera
         </Typography>
         <Typography variant="h6" component="p" color="textSecondary" >
-          Full Stack Developer - Diving deep into backend development, I'm all about crafting the next generation of scalable, efficient, and delightful software solutions
+          {bio}
         </Typography>
       </Box>
     </Container>
