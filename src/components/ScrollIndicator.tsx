@@ -16,7 +16,7 @@ export const ScrollIndicator = () => {
           '30%': { transform: 'translateY(-8px)' },
         }
       }}>
-      <KeyboardArrowDown fontSize="large" sx={{ opacity: 0.5 }} />
+      <KeyboardArrowDown fontSize="large" color="primary" />
     </IconButton>
   )
 }
