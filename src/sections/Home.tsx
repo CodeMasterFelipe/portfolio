@@ -2,6 +2,9 @@ import { Box, Typography, Container } from '@mui/material';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
+const bio = `A Software Engineer and Tech Educator from Seattle. Energized by a cup of the finest brew, I craft innovative software solutions \
+            and mentor the next generation of tech wizards. Ready for a caffeine-fueled coding adventure? Let's connect!`;
+
 export const Home = () => {
 
   useGSAP(() => {
@@ -24,20 +27,26 @@ export const Home = () => {
   })
 
   return (
-    <Container maxWidth="md" id="home">
+    <Container maxWidth="xl" id="home">
       <Box sx={{
         height: '92vh',
+        width: '100%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        textAlign: 'start',
+        textAlign: 'center',
       }}>
-        <Typography variant="h3" component="h1" gutterBottom>
+        <Typography variant="h1" component="h1" gutterBottom
+          sx={{
+            fontWeight: 200,
+            fontSize: { xs: '5rem', sm: '6rem', lg: '8rem' },
+          }}
+        >
           Felipe Rivera
         </Typography>
         <Typography variant="h6" component="p" color="textSecondary" >
-          Full Stack Developer - Diving deep into backend development, I'm all about crafting the next generation of scalable, efficient, and delightful software solutions
+          {bio}
         </Typography>
       </Box>
     </Container>

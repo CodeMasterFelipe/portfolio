@@ -5,24 +5,34 @@ import Grid from '@mui/material/Unstable_Grid2'
 const projects = [
   {
     title: "LLM Chat Agents",
-    description: "As my interest in ML and smart system have existed always inside me, I dive deeper on making a useful chatbot. \
-      It has different character that you can customize and talk to. I also created the option to generate images which can be created \
-      for the profile of the different characters. The bots have the ability of also searching the web.",
-    link: "https://example.com/project-one",
-    code: "https://github.com/yourusername/project-one"
+    description: "Inspired by my ever-present fascination with machine learning and intelligent systems, I ventured into the world of chatbots. \
+      The result? LLM Chat Agents: a customizable, engaging chat experience with a variety of characters to interact with. Not stopping there, \
+      I infused creativity by allowing users to generate unique images for each character's profile. These smart agents aren't just about conversations; \
+      they're also web-savvy, capable of fetching information across the internet. Dive into a chat like no other—where your conversational partner is \
+      only limited by your imagination.",
+    tech: ["Python", "ChatGPT API", "LLaMa", "SDXL", "..."],
+    link: "",
+    code: ""
   },
   {
     title: "MacOS Tiling Window Manager",
-    description: "MacOS is missing good window managment so I decided to create a hybrid tiling window managment that could benefit my 32:9 monitor.",
-    link: "https://example.com/project-two",
-    code: "https://github.com/yourusername/project-two"
+    description: "Frustrated with MacOS's lackluster window management and determined to optimize my ultra-wide 32:9 monitor setup, \
+      I engineered a solution: a hybrid tiling window manager for MacOS. This project not only elevates productivity but also introduces a sleek, \
+      efficient way to organize your digital workspace. It's the window management Mac enthusiasts have been dreaming of \
+      —because your workspace should work as hard as you do.",
+    tech: ["Swift", "SwiftUI"],
+    link: "",
+    code: "https://github.com/CodeMasterFelipe/WinMan"
   },
   {
-    title: "React Minimalist Portfolio",
-    description: "I finally decided to spend the time to build a website to showcase what I am capable of. \
-      I love simplicity and minimalism and thus I make it guide me in the design of my portfolio.",
-    link: "https://example.com/project-two",
-    code: "https://github.com/yourusername/project-two"
+    title: "React  M inimalist Portfolio",
+    description: "Embracing the elegance of simplicity, I decided it was time to craft a digital space that emodies what I stand for. \
+      Enter my React-based Minimalist Portfolio: a clean, straightforward website that showcases my capabilities without the clutter. \
+      Guided by the principles of minimalism, this project is a testament to the beauty of simplicity in design. \
+      Explore my world, where every pixel serves a purpose.",
+    tech: ["React", "TypeScript", "Material-UI", "GSAP"],
+    link: "",
+    code: "https://github.com/CodeMasterFelipe/portfolio"
   },
   // Add more projects as needed
 ];
@@ -30,7 +40,7 @@ const projects = [
 export const Projects = () => {
   return (
     <Container maxWidth="lg" id="projects">
-      <Typography variant="h4" component="h2" gutterBottom>
+      <Typography variant="h2" gutterBottom>
         Projects
       </Typography>
       <Grid
