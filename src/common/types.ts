@@ -4,4 +4,5 @@ export type ProjectProps = {
   image?: string;
   link: string;
   code: string;
+  tech: string[];
 }
