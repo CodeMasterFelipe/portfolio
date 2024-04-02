@@ -30,7 +30,7 @@ const projects = [
 export const Projects = () => {
   return (
     <Container maxWidth="lg" id="projects">
-      <Typography variant="h4" component="h2" gutterBottom>
+      <Typography variant="h2" gutterBottom>
         Projects
       </Typography>
       <Grid

@@ -24,16 +24,22 @@ export const Home = () => {
   })
 
   return (
-    <Container maxWidth="md" id="home">
+    <Container maxWidth="xl" id="home">
       <Box sx={{
         height: '92vh',
+        width: '100%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        textAlign: 'start',
+        textAlign: 'center',
       }}>
-        <Typography variant="h3" component="h1" gutterBottom>
+        <Typography variant="h1" component="h1" gutterBottom
+          sx={{
+            fontWeight: 200,
+            fontSize: { xs: '5rem', sm: '6rem', lg: '8rem' },
+          }}
+        >
           Felipe Rivera
         </Typography>
         <Typography variant="h6" component="p" color="textSecondary" >
