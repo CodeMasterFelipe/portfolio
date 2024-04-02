@@ -1,24 +1,38 @@
-import { Button, Typography, Link, Card, CardContent, CardActions, CardActionArea } from '@mui/material';
+import { Button, Typography, Link, Card, CardContent, CardActions, Chip } from '@mui/material';
 import { ProjectProps } from '../common/types';
 
-export const ProjectTile = ({ title, description, link, code }: ProjectProps) => {
+export const ProjectTile = ({ title, description, link, code, tech }: ProjectProps) => {
   return (
     <Card sx={{
       display: 'flex',
       flexDirection: 'column',
       height: '100%',
     }}>
-      <CardActionArea>
-        <CardContent>
-
+      <CardContent sx={{
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+      }}>
+        <div>
           <Typography variant="h5" component="h3" gutterBottom>
             {title}
           </Typography>
           <Typography variant="body1" component="p" color="textSecondary">
             {description}
           </Typography>
-        </CardContent>
-      </CardActionArea>
+        </div>
+        <div style={{
+          marginTop: '8px',
+          display: "flex",
+          flexWrap: "wrap-reverse",
+          gap: '8px',
+        }}>
+          {tech.map((technology, index) => (
+            <Chip key={index} label={technology} />
+          ))}
+        </div>
+      </CardContent>
       <CardActions
         sx={{
           mt: 'auto',

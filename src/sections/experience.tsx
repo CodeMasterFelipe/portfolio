@@ -5,26 +5,33 @@ const experiences = [
   {
     title: "Software Engineer Principal Instructor",
     company: "TalentSprint",
-    description: `-\tResponsible for the curriculum design, crafting, and teaching of the 18 months software engineering program for colleges in underrepresented communities, in the US and India.
--\tTraining students in full stack programming best practices, with the objective of getting into big tech companies.
-`,
+    description: [
+      `Designed and delivered an 18-month software engineering curriculum for students in underrepresented communities in the US and India, \
+       focusing on full stack programming and preparation for careers in big tech.`,
+      `Enhanced student understanding and practical application of software development principles, \
+       contributing to their successful entry into the technology sector.`
+    ],
     duration: "Mar 2022 - Present"
   },
   {
     title: "Software Engineer/Architect",
     company: "Self-Employed",
-    description: `Developed a software platform to reduce risk and increase returns in day trading of cryptocurrencies through the application of real-time machine learning techniques.
-Implementing algorithms with an accuracy rate of 77%, generated trades as high as 20% in returns.
-Developing and designing a scalable and robust architecture, deployed on a Kubernetes cluster, leveraging Kafka as the event orchestrator, with automatic CI/CD pipelines, to ensure seamless performance and reliability.
-Utilize advanced technologies and tools, including Python, Java, javascript, TensorFlow, Sklearn, Flutter, NoSQL/SQL databases, and GCP/AWS/on-prem infrastructure
-https://github.com/Strooper1234/Bybit-api (all I am able to share)`,
+    description: [
+      `Developed a high-performance software platform for cryptocurrency day trading, \
+       employing real-time machine learning for risk reduction and return maximization.`,
+      `Achieved a 77% accuracy rate in trade predictions, resulting in up to 20% returns through the implementation of robust, \
+       scalable architecture and continuous integration/deployment pipelines.`,
+      `Technologies used: Python, Java, JavaScript, TensorFlow, Sklearn, Flutter, NoSQL/SQL, GCP/AWS, Kubernetes.`
+    ],
     duration: "May 2019 - Present",
   },
   {
     title: "TA/Substitute Instructor",
     company: "2U Inc.",
-    description: `Assisted students with programming, data analysis, and project development.
-Provided on-demand support: concept clarification, debugging, and code reviews.`,
+    description: [
+      `Provided comprehensive support in programming, data analysis, and project development, facilitating a collaborative and interactive learning environment.`,
+      `Conducted code reviews and debugging sessions, ensuring students acquired necessary technical skills and knowledge.`
+    ],
     duration: "Feb 2019 - Sep 2022"
   },
   // Add more experiences as needed
@@ -60,9 +67,17 @@ export const Experience = () => {
               <Typography variant="subtitle1" component="p" color="textSecondary">
                 @ {experience.company}
               </Typography>
-              <Typography variant="body1" component="p">
-                {experience.description}
-              </Typography>
+              <ul>
+                {experience.description.map((desc, index) => (
+                  <Typography variant="body1" component="li" key={index}
+                    sx={{
+                      textAlign: 'left',
+                    }}
+                  >
+                    {desc}
+                  </Typography>
+                ))}
+              </ul>
               <Typography variant="body2" component="p" color="textSecondary">
                 {experience.duration}
               </Typography>
