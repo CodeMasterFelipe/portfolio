@@ -1,4 +1,4 @@
-import { Button, Typography, Link, Card, CardContent, CardActions, Chip, Stack } from '@mui/material';
+import { Button, Typography, Link, Card, CardContent, CardActions, Chip } from '@mui/material';
 import { ProjectProps } from '../common/types';
 
 export const ProjectTile = ({ title, description, link, code, tech }: ProjectProps) => {
