@@ -35,7 +35,7 @@ export const Experience = () => {
   const isSmallScreen = useMediaQuery('(max-width:900px)')
   return (
     <Container maxWidth="md" id="experience">
-      <Typography variant="h4" component="h2" gutterBottom>
+      <Typography variant="h2" gutterBottom>
         Experience
       </Typography>
       <Timeline
@@ -50,7 +50,7 @@ export const Experience = () => {
         {experiences.map((experience, index) => (
           <TimelineItem key={index}>
             <TimelineSeparator>
-              <TimelineDot />
+              <TimelineDot color="primary" />
               {index < experiences.length - 1 && <TimelineConnector />}
             </TimelineSeparator>
             <TimelineContent>

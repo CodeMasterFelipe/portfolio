@@ -3,16 +3,25 @@ import { createTheme } from '@mui/material/styles';
 export const theme = createTheme({
   palette: {
     primary: {
-      main: '#AA7bff',
+      main: '#437492',
     },
     background: {
       default: '#f4f5f7',
     },
   },
   typography: {
-    fontFamily: 'Roboto, sans-serif',
+    fontFamily: 'Exo, sans-serif',
     h1: {
-      fontWeight: 400,
+      fontFamily: 'Azonix',
+      fontWeight: 200,
+      fontSize: '5rem',
+      color: '#2b404e',
+    },
+    h2: {
+      fontFamily: 'Azonix',
+      fontSize: '2rem',
+      fontWeight: 'lighter',
+      color: '#2b404e',
     },
     h6: {
       fontWeight: 300,
