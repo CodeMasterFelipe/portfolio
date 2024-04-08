@@ -3,7 +3,7 @@ import { ProjectProps } from '../common/types';
 
 export const ProjectTile = ({ title, description, link, code, tech }: ProjectProps) => {
   return (
-    <Card sx={{
+    <Card elevation={8} sx={{
       display: 'flex',
       flexDirection: 'column',
       height: '100%',
