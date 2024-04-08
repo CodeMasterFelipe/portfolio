@@ -13,7 +13,7 @@ import FluidSimulationComponent from './components/FluidSimulationComponent'
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 const ContentContainer = ({ children }: { children: React.ReactNode }) => (
-  <Paper id='content-container' style={{ position: 'relative', zIndex: 200 }}>
+  <Paper id='content-container' elevation={6} style={{ position: 'relative', zIndex: 200 }}>
     <ScrollIndicator />
     <Box sx={{ p: 0, pt: 6 }}>
       {children}
