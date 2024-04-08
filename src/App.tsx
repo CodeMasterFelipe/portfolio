@@ -8,11 +8,12 @@ import { ScrollIndicator } from './components/ScrollIndicator'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/all'
+import FluidSimulationComponent from './components/FluidSimulationComponent'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 const ContentContainer = ({ children }: { children: React.ReactNode }) => (
-  <Paper id='content-container'>
+  <Paper id='content-container' style={{ position: 'relative', zIndex: 200 }}>
     <ScrollIndicator />
     <Box sx={{ p: 0, pt: 6 }}>
       {children}
@@ -25,6 +26,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Home />
+      <FluidSimulationComponent />
       <ContentContainer>
         <Projects />
         <Box sx={{ height: '80px' }} />
