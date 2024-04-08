@@ -1,19 +1,22 @@
 import React, { useRef, useEffect } from 'react';
 import FluidDynamicsSolver from '../fluidSimulation/FluidDynamicsSolver'; // Adjust the import path according to your project structure
 
-const canvasWidth = window.outerWidth;
-const canvasHeight = window.outerHeight;
+const canvasWidth = window.innerWidth
+const canvasHeight = window.innerHeight
 // const canvasHeight = 512;
 
 const FluidBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const mouseLayerRef = useRef<HTMLDivElement>(null);
   const scale = 10;
   // const solver = new FluidDynamicsSolver(Math.floor(window.innerWidth / scale), 0.005, 0.0, -0.0001); // Example parameters
-  const solver = new FluidDynamicsSolver(Math.floor(window.innerWidth / scale), 0.006, 0, -0.0002); // Example parameters
-  // const solver = new FluidDynamicsSolver(Math.floor(window.innerWidth / scale), 0.06, 0, 0.0); // Example parameters
+  // const solver = new FluidDynamicsSolver(Math.floor(window.innerWidth / scale), 0.006, 0, -0.0002); // Example parameters
+  const solver = new FluidDynamicsSolver(Math.floor(window.innerWidth / scale), 0.006, 0, 0.0); // Example parameters
+  solver.addVelocity(Math.floor(canvasWidth * 3 / 5 / scale), Math.floor(canvasHeight / 2 / scale), 5000, 0)
+  solver.addVelocity(Math.floor(canvasWidth * 2 / 5 / scale), Math.floor(canvasHeight / 2 / scale), -5000, 0)
+  solver.addVelocity(Math.floor(canvasWidth * 2.5 / 5 / scale), Math.floor(canvasHeight * 2.3 / 5 / scale), 0, -7000)
+  solver.addVelocity(Math.floor(canvasWidth * 2.5 / 5 / scale), Math.floor(canvasHeight * 2.7 / 5 / scale), 0, 7000)
   const amount = 60; // Density amount to inject
-  const velocityAmount = 10; // Velocity amount to inject
+  const velocityAmount = 40; // Velocity amount to inject
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -36,7 +39,7 @@ const FluidBackground: React.FC = () => {
       const gridY = Math.floor(y / scale);
 
       solver.addDensity(gridX, gridY, amount);
-      solver.addVelocity(gridX, gridY, (x - lastX) * velocityAmount, (y - lastY >= 0 ? 1 : -1) * velocityAmount);
+      solver.addVelocity(gridX, gridY, (x - lastX) / scale * velocityAmount, (y - lastY) / scale * velocityAmount);
 
       lastX = x;
       lastY = y;
@@ -94,7 +97,8 @@ const FluidBackground: React.FC = () => {
       animationFrameId = window.requestAnimationFrame(render);
     };
     // mouseLayerRef.addEventListener('mousemove', onMouseMove);
-    mouseLayerRef.current?.addEventListener('mousemove', onMouseMove);
+    // mouseLayerRef.current?.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('mousemove', onMouseMove);
     render();
 
     return () => {
@@ -103,7 +107,6 @@ const FluidBackground: React.FC = () => {
   }, []);
   return (
     <>
-      <div ref={mouseLayerRef} style={{ position: 'fixed', left: 0, top: 0, zIndex: 1000, width: '100%', height: '100%' }} />
       <canvas ref={canvasRef} width={canvasWidth} height={canvasHeight} style={{ position: 'fixed', left: 0, top: 0, zIndex: 0 }} />
     </>
   )
