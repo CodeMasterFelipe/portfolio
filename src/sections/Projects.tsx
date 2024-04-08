@@ -25,7 +25,7 @@ const projects = [
     code: "https://github.com/CodeMasterFelipe/WinMan"
   },
   {
-    title: "React  M inimalist Portfolio",
+    title: "React Minimalist Portfolio",
     description: "Embracing the elegance of simplicity, I decided it was time to craft a digital space that emodies what I stand for. \
       Enter my React-based Minimalist Portfolio: a clean, straightforward website that showcases my capabilities without the clutter. \
       Guided by the principles of minimalism, this project is a testament to the beauty of simplicity in design. \

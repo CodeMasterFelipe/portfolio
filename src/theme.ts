@@ -2,11 +2,12 @@ import { createTheme } from '@mui/material/styles';
 
 export const theme = createTheme({
   palette: {
+    mode: 'dark',
     primary: {
-      main: '#437492',
+      main: 'rgba(200, 255, 255, 1)',
     },
     background: {
-      default: '#f4f5f7',
+      default: '#242424',
     },
   },
   typography: {
@@ -15,16 +16,17 @@ export const theme = createTheme({
       fontFamily: 'Azonix',
       fontWeight: 200,
       fontSize: '5rem',
-      color: '#2b404e',
+      color: 'rgba(200, 255, 255, 1)',
     },
     h2: {
       fontFamily: 'Azonix',
       fontSize: '2rem',
       fontWeight: 'lighter',
-      color: '#2b404e',
+      color: 'rgba(200, 255, 255, 1)',
     },
     h6: {
-      fontWeight: 300,
+      fontWeight: 'bold',
+      color: 'rgba(230, 230, 230, 1)',
     }
   }
 })
