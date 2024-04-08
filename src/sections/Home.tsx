@@ -27,7 +27,7 @@ export const Home = () => {
   })
 
   return (
-    <Container maxWidth="xl" id="home">
+    <Container maxWidth="xl" id="home" style={{ position: 'relative', zIndex: 200 }}>
       <Box sx={{
         height: '92vh',
         width: '100%',
@@ -41,11 +41,12 @@ export const Home = () => {
           sx={{
             fontWeight: 200,
             fontSize: { xs: '5rem', sm: '6rem', lg: '8rem' },
+            color: 'primary.main',
           }}
         >
           Felipe Rivera
         </Typography>
-        <Typography variant="h6" component="p" color="textSecondary" >
+        <Typography variant="h6" component="p" sx={{ color: '#ffffffde' }} >
           {bio}
         </Typography>
       </Box>
