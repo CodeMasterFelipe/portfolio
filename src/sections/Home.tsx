@@ -41,12 +41,11 @@ export const Home = () => {
           sx={{
             fontWeight: 200,
             fontSize: { xs: '5rem', sm: '6rem', lg: '8rem' },
-            color: 'primary.main',
           }}
         >
           Felipe Rivera
         </Typography>
-        <Typography variant="h6" component="p" sx={{ color: '#ffffffde' }} >
+        <Typography variant="h6" component="p" >
           {bio}
         </Typography>
       </Box>
