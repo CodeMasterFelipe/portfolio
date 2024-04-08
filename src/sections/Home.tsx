@@ -2,7 +2,7 @@ import { Box, Typography, Container } from '@mui/material';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-const bio = `A Software Engineer and Tech Educator from Seattle. Energized by a cup of the finest brew, I craft innovative software solutions \
+const bio = `A Software Engineer and Tech Educator from Seattle. I craft innovative software solutions \
             and mentor the next generation of tech wizards. Ready for a caffeine-fueled coding adventure? Let's connect!`;
 
 export const Home = () => {
