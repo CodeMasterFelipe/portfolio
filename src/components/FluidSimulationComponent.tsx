@@ -3,6 +3,7 @@ import FluidDynamicsSolver from '../fluidSimulation/FluidDynamicsSolver'; // Adj
 
 const canvasWidth = window.innerWidth
 const canvasHeight = window.innerHeight
+const size = (canvasWidth > canvasHeight) ? canvasWidth : canvasHeight
 // const canvasHeight = 512;
 
 const FluidBackground: React.FC = () => {
@@ -10,7 +11,7 @@ const FluidBackground: React.FC = () => {
   const scale = 10;
   // const solver = new FluidDynamicsSolver(Math.floor(window.innerWidth / scale), 0.005, 0.0, -0.0001); // Example parameters
   // const solver = new FluidDynamicsSolver(Math.floor(window.innerWidth / scale), 0.006, 0, -0.0002); // Example parameters
-  const solver = new FluidDynamicsSolver(Math.floor(window.innerWidth / scale), 0.006, 0.0, 0.0); // Example parameters
+  const solver = new FluidDynamicsSolver(Math.floor(size / scale), 0.006, 0.0, 0.0); // Example parameters
   solver.addVelocity(Math.floor(canvasWidth * 3 / 5 / scale), Math.floor(canvasHeight / 2 / scale), 5000, 0)
   solver.addVelocity(Math.floor(canvasWidth * 2 / 5 / scale), Math.floor(canvasHeight / 2 / scale), -5000, 0)
   solver.addVelocity(Math.floor(canvasWidth * 2.5 / 5 / scale), Math.floor(canvasHeight * 2.3 / 5 / scale), 0, -7000)
