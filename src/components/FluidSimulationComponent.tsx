@@ -8,7 +8,7 @@ const size = (canvasWidth > canvasHeight) ? canvasWidth : canvasHeight
 
 const FluidBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const scale = 10;
+  const scale = (canvasWidth > 600) ? 10 : 6;
   // const solver = new FluidDynamicsSolver(Math.floor(window.innerWidth / scale), 0.005, 0.0, -0.0001); // Example parameters
   // const solver = new FluidDynamicsSolver(Math.floor(window.innerWidth / scale), 0.006, 0, -0.0002); // Example parameters
   const solver = new FluidDynamicsSolver(Math.floor(size / scale), 0.006, 0.0, 0.0); // Example parameters
