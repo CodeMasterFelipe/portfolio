@@ -41,26 +41,30 @@ export const ProjectTile = ({ title, description, link, code, tech }: ProjectPro
           justifyContent: 'center',
         }}
       >
-        <Button
-          href={link}
-          target="_blank"
-          // rel="noopener noreferrer"
-          variant="contained"
-          component={Link}
-          color="primary"
-        >
-          Visit Site
-        </Button>
-        <Button
-          href={code}
-          target="_blank"
-          component={Link}
-          variant="outlined"
-          color="primary"
-        // sx={{ ml: 1 }}
-        >
-          View Code
-        </Button>
+        {(link) &&
+          <Button
+            href={link}
+            target="_blank"
+            // rel="noopener noreferrer"
+            variant="contained"
+            component={Link}
+            color="primary"
+          >
+            Visit Site
+          </Button>
+        }
+        {(code) &&
+          <Button
+            href={code}
+            target="_blank"
+            component={Link}
+            variant="outlined"
+            color="primary"
+          // sx={{ ml: 1 }}
+          >
+            View Code
+          </Button>
+        }
       </CardActions>
     </Card>
   );
