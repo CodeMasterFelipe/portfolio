@@ -28,9 +28,9 @@ function App() {
       <Home />
       <FluidSimulationComponent />
       <ContentContainer>
-        <Projects />
-        <Box sx={{ height: '80px' }} />
         <Experience />
+        <Box sx={{ height: '80px' }} />
+        <Projects />
         <Box sx={{ height: '80px' }} />
       </ContentContainer>
     </ThemeProvider>
